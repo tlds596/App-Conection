@@ -51,18 +51,25 @@ dependencies {
     implementation(libs.coroutines.android)
     implementation(libs.coroutines.core)
 
-    // OkHttp usando el BOM del libs.versions.toml
+
     implementation(platform(libs.http.bom))
     implementation(libs.http.okhttp)
     implementation(libs.http.logging)
 
     implementation(libs.moshi.core)
     implementation(libs.moshi.kotlin)
+    implementation(libs.moshi.codegen)
+    ksp(libs.moshi.codegen)
 
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
 
+
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.moshi)
+
+    implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
